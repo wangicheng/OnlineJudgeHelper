@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+
+    "name": "Online Judge 網頁優化工具",
+    "description": "把切換頁面的按鈕固定在畫面上方。",
+    "version": "0.1.0",
+    "icons": {
+      "16": "./icon/icon16.png",
+      "48": "./icon/icon.png",
+      "128": "./icon/icon.png"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["http://134.208.3.66/*"],
+        "js": ["./tool_oj.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "./icon/icon16.png",
+        "48": "./icon/icon.png",
+        "128": "./icon/icon.png"
+      }
+    }
+}
